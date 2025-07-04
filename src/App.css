@@ -1,0 +1,119 @@
+/* Updated App.css */
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  color: #111827;
+  line-height: 1.6;
+}
+
+/* Removed text-align center so content doesn't force center align */
+#root {
+  min-height: 100vh;
+}
+
+/* Global Section Styling */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  color: #111827;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+a {
+  color: #4f46e5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #6366f1;
+}
+
+/* Navbar spacing */
+nav a {
+  margin-right: 1.25rem;
+}
+
+/* Container utility for layout */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Make sure images scale */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navbar link spacing for flex layout */
+.navbar-link {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+/* Button utility (if using Tailwind classes via @apply, only works with PostCSS setup) */
+.btn {
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+/* Utility classes for spacing */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Responsive nav fixes */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
