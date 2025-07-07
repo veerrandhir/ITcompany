@@ -4,10 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        indigo: {
-          500: "#6366f1",
-          600: "#4f46e5",
-        },
+        primary: "#10B981", // Green accent color
+        darkbg: "#111827", // Dark mode background
       },
     },
   },

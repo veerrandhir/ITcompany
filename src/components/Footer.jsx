@@ -17,17 +17,17 @@ const Footer = () => {
                     </div>
 
                     {/* Services Column */}
-                    <div>
-                        <h3 className="text-xl font-bold mb-4">Services</h3>
-                        <ul className="space-y-2">
-                            {/* These Links also need the Link import */}
-                            <li><Link to="/services" className="hover:text-indigo-400" onClick={() => console.log('Static Websites clicked')}>Static Websites</Link></li>
-                            <li><Link to="/services" className="hover:text-indigo-400" onClick={() => console.log('E-commerce Solutions clicked')}>E-commerce Solutions</Link></li>
-                            <li><Link to="/services" className="hover:text-indigo-400" onClick={() => console.log('Custom Web Apps clicked')}>Custom Web Apps</Link></li>
-                            <li><Link to="/services" className="hover:text-indigo-400" onClick={() => console.log('Hosting & Domain clicked')}>Hosting & Domain</Link></li>
-                            <li><Link to="/services" className="hover:text-indigo-400" onClick={() => console.log('SEO Optimization clicked')}>SEO Optimization</Link></li>
-                        </ul>
-                    </div>
+                          <div>
+            <h3 className="text-xl font-bold mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li><Link to="/services/static-websites" className="hover:text-indigo-400">Static Websites</Link></li>
+              <li><Link to="/services/ecommerce-solutions" className="hover:text-indigo-400">E-commerce Solutions</Link></li>
+              <li><Link to="/services/custom-web-apps" className="hover:text-indigo-400">Custom Web Apps</Link></li>
+              <li><Link to="/services/hosting-domain" className="hover:text-indigo-400">Hosting & Domain</Link></li>
+              <li><Link to="/services/seo-optimization" className="hover:text-indigo-400">SEO Optimization</Link></li>
+            </ul>
+          </div>
+
 
                     {/* Contact Column */}
                     <div>
@@ -36,7 +36,7 @@ const Footer = () => {
                             <p className="mb-2">123 Business Street</p>
                             <p className="mb-2">Mumbai, India 400001</p>
                             <p className="mb-2">Email: contact@webweavers.com</p>
-                            <p>Phone: +91 98765 43210</p>
+                            <p>Phone: +91 87890 77454</p>
                         </address>
                     </div>
 

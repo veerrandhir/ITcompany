@@ -4,11 +4,17 @@ import { Link } from 'react-router-dom';
 // Assuming NavLink and MobileNavLink are exported from a HelperComponents.jsx file
 // in the same directory (src/components/)
 import { NavLink, MobileNavLink } from './HelperComponents';
+// src/components/Navbar.jsx (add at top)
+import { useLocation } from 'react-router-dom';
+
+
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-
+// Then inside your Navbar component, you can use:
+const location = useLocation();
+// To track current route if needed
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
