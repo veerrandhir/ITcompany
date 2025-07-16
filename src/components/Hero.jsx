@@ -8,7 +8,7 @@ const Hero = () => {
         muted 
         className="absolute inset-0 w-full h-full object-cover opacity-30"
       >
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-network-31539-large.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/drrtddlst/image/upload/v1752662497/front-page-teamlooking-at-screen-with-smile_xqzpgz.png" type="image/.png" />
       </video>
       
       {/* Content */}
