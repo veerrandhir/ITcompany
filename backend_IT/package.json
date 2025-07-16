@@ -1,0 +1,35 @@
+{
+  "name": "webweavers-backend",
+  "version": "1.0.0",
+  "description": "This is backend file for getting all data form our website",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run start"
+  },
+  "keywords": [
+    "node.js",
+    "javascript",
+    "mongodb",
+    "npm",
+    "packege.json"
+  ],
+  "author": "Randhir Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.1.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.2",
+    "mongoose-aggregate-paginate-v2": "^1.1.4",
+    "morgan": "^1.10.0",
+    "node": "^22.17.0",
+    "validator": "^13.15.15"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
