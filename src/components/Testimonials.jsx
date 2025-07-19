@@ -3,7 +3,7 @@ import { FaQuoteLeft } from 'react-icons/fa';
 const Testimonials = () => {
     const testimonials = [
         {
-            quote: "WebWeavers transformed our outdated site into a modern sales machine. Our online inquiries increased by 200%!",
+            quote: "CODDEX transformed our outdated site into a modern sales machine. Our online inquiries increased by 200%!",
             name: "Rajesh Sharma",
             company: "SpiceDelight Foods"
         },
@@ -18,7 +18,7 @@ const Testimonials = () => {
             company: "TechSolutions Inc."
         },
         {
-            quote: "We needed a fast launch — WebWeavers delivered in just 7 days. Design, SEO, and UX were all on point.",
+            quote: "We needed a fast launch — CODDEX delivered in just 7 days. Design, SEO, and UX were all on point.",
             name: "Nikita Jain",
             company: "Glow & Go"
         },
