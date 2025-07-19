@@ -1,3 +1,5 @@
+//src/pages/services/About.jsx
+
 import { FaLightbulb, FaHandshake, FaRocket } from 'react-icons/fa';
 
 const About = () => {
