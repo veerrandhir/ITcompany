@@ -1,5 +1,5 @@
 {
-  "name": "webweavers-backend",
+  "name": "CODDEX-backend",
   "version": "1.0.0",
   "description": "This is backend file for getting all data form our website",
   "main": "server.js",

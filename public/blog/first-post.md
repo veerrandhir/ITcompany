@@ -1,7 +1,7 @@
 ---
 title: "Why Every Local Business Needs a Website in 2023"
 date: "2023-10-15"
-author: "WebWeavers Team"
+author: "CODDEX Team"
 excerpt: "Discover how a professional website can transform your local business and help you reach more customers."
 coverImage: "/images/blog/post-1.jpg"
 ---

@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* About Column */}
                     <div>
-                        <h3 className="text-xl font-bold mb-4">WebWeavers</h3>
+                        <h3 className="text-xl font-bold mb-4">CODDEX</h3>
                         <p className="mb-4">Crafting Code. Creating Success.</p>
                         <p>Making premium web development accessible to businesses of all sizes.</p>
                     </div>
@@ -35,7 +35,7 @@ const Footer = () => {
                         <address className="not-italic">
                             <p className="mb-2">123 Business Street</p>
                             <p className="mb-2">Mumbai, India 400001</p>
-                            <p className="mb-2">Email: contact@webweavers.com</p>
+                            <p className="mb-2">Email: contact@CODDEX.com</p>
                             <p>Phone: +91 87890 77454</p>
                         </address>
                     </div>
@@ -62,7 +62,7 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-                    <p>&copy; {new Date().getFullYear()} WebWeavers. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} CODDEX. All rights reserved.</p>
                 </div>
             </div>
         </footer>

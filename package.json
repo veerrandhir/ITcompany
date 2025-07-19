@@ -1,58 +1,23 @@
 {
-<<<<<<< HEAD
-  "name": "my-react-app",
+  "name": "CODDEX-agency",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "aos": "^2.3.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "vitest"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^14.3.1",
-    "@testing-library/user-event": "^14.6.1",
-    "@vitejs/plugin-react": "^4.6.0",
-    "vite": "^5.0.0",
-    "vitest": "^1.6.1"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-=======
-<<<<<<< HEAD
-  "name": "webweavers-agency-copy",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint ."
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "aos": "^2.3.4",
     "gray-matter": "^4.0.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "react-markdown": "^10.1.0",
-    "react-router-dom": "^7.6.3"
+    "react-router-dom": "^7.7.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
@@ -67,40 +32,17 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11",
     "vite": "^7.0.0"
-=======
-  "name": "webweavers-backend",
-  "version": "1.0.0",
-  "description": "This is backend file for getting all data form our website",
-  "main": "server.js",
-  "scripts": {
-    "test": "npm run start"
   },
-  "keywords": [
-    "node.js",
-    "javascript",
-    "mongodb",
-    "npm",
-    "packege.json"
-  ],
-  "author": "Randhir Kumar",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^3.0.2",
-    "cors": "^2.8.5",
-    "dotenv": "^17.1.0",
-    "express": "^5.1.0",
-    "helmet": "^8.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongodb": "^6.17.0",
-    "mongoose": "^8.16.2",
-    "mongoose-aggregate-paginate-v2": "^1.1.4",
-    "morgan": "^1.10.0",
-    "node": "^22.17.0",
-    "validator": "^13.15.15"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
->>>>>>> 9292457 (Initial commit with .gitignore to exclude node_modules Defined backend)
->>>>>>> 83297d600bf07cd7fc3df7053dd66a8514a3df0a
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

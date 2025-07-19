@@ -1,64 +1,68 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
-// Lazy-loaded page components
+// Lazy-loaded components
 const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
+const About = lazy(() => import('./pages/AboutCODDEX'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const NotFound = lazy(() => import('./pages/NotFound'));
-
-// Lazy-loaded service pages
 const StaticWebsites = lazy(() => import('./pages/services/StaticWebsites'));
 const EcommerceSolutions = lazy(() => import('./pages/services/EcommerceSolutions'));
 const CustomWebApps = lazy(() => import('./pages/services/CustomWebApps'));
 const HostingDomain = lazy(() => import('./pages/services/HostingDomain'));
 const SeoOptimization = lazy(() => import('./pages/services/SeoOptimization'));
-
-// Lazy-loaded layout components
 const Navbar = lazy(() => import('./components/Navbar'));
 const Footer = lazy(() => import('./components/Footer'));
 const ServicesLayout = lazy(() => import('./components/ServicesLayout'));
+const Header = lazy(() => import('./components/Header'));
 
-// Scroll restoration component
+// Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
   return null;
 }
 
-// Loading spinner component
+// Loading spinner during lazy load
 function LoadingSpinner() {
   return (
-    <div className="fixed inset-0 flex items-center justify-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-indigo-600"></div>
+    <div className="fixed inset-0 flex items-center justify-center bg-window z-50">
+      <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-primary"></div>
     </div>
   );
 }
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Toggle dark mode by adding/removing "dark" class on html
+  useEffect(() => {
+    const root = document.documentElement;
+    if (darkMode) {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+  }, [darkMode]);
+
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-white">
+      <div className="flex flex-col min-h-screen transition-colors duration-500">
         <Suspense fallback={<LoadingSpinner />}>
-          <Navbar />
-          
-          <main className="flex-grow pt-16"> {/* pt-16 for navbar height */}
+          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+
+          <main className="flex-grow pt-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
               <Routes>
-                {/* Main Routes */}
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<><Header /><Home /></>} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<Blog />} />
-
-                {/* Services Nested Routes */}
                 <Route path="/services" element={<ServicesLayout />}>
                   <Route index element={<Services />} />
                   <Route path="static-websites" element={<StaticWebsites />} />
@@ -67,8 +71,6 @@ function App() {
                   <Route path="hosting-domain" element={<HostingDomain />} />
                   <Route path="seo-optimization" element={<SeoOptimization />} />
                 </Route>
-
-                {/* 404 Catch-all Route */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>

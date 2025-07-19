@@ -1,65 +1,63 @@
-<<<<<<< HEAD
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-=======
-/* Updated App.css */
-
-body {
-  font-family: 'Inter', sans-serif;
+/* Reset basic styling */
+html, body {
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
   background-color: #f9fafb;
   color: #111827;
   line-height: 1.6;
+  overflow-x: hidden; /* 🔥 Prevents horizontal scroll */
 }
 
-/* Removed text-align center so content doesn't force center align */
 #root {
   min-height: 100vh;
 }
 
-/* Global Section Styling */
+/* Container utility */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow-x: hidden; /* 🔥 Fix for video/image overflow */
+}
+
+/* Navbar spacing */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* 🔥 Replaces margin-right */
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #6366f1; /* Indigo hover */
+}
+
+/* Responsive nav (mobile) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav a {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Section styling */
 section {
   padding-top: 4rem;
   padding-bottom: 4rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  overflow-x: hidden; /* 🔥 Stop horizontal scroll */
 }
 
 /* Typography */
@@ -76,43 +74,22 @@ p {
 }
 
 a {
-  color: #4f46e5;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: #4f46e5; /* Indigo base */
 }
 
 a:hover {
-  color: #6366f1;
+  color: #6366f1; /* Indigo hover */
 }
 
-/* Navbar spacing */
-nav a {
-  margin-right: 1.25rem;
-}
-
-/* Container utility for layout */
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* Make sure images scale */
-img {
+/* Images and Videos */
+img, video {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 0.5rem; /* Optional rounded corners */
 }
 
-/* Navbar link spacing for flex layout */
-.navbar-link {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
-
-/* Button utility (if using Tailwind classes via @apply, only works with PostCSS setup) */
+/* Buttons */
 .btn {
   font-weight: 600;
   padding: 0.75rem 2rem;
@@ -120,41 +97,41 @@ img {
   transition: all 0.3s ease;
 }
 
-/* Utility classes for spacing */
-.text-center {
-  text-align: center;
+/* Utility spacing */
+.mt-4 { margin-top: 1rem; }
+.mt-8 { margin-top: 2rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-8 { margin-bottom: 2rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+
+/* Dark Mode Support */
+html.dark {
+  background-color: #111827;
+  color: #f9fafb;
 }
 
-.text-left {
-  text-align: left;
+html.dark a {
+  color: #4f46e5;
 }
 
-.mt-4 {
-  margin-top: 1rem;
+html.dark a:hover {
+  color: #818cf8;
 }
 
-.mt-8 {
-  margin-top: 2rem;
+html.dark nav {
+  background-color: #1f2937; /* Dark nav background */
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
+html.dark section {
+  background-color: #1f2937; /* Dark section background */
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* Responsive nav fixes */
-@media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 0.5rem 0;
+/* Keyframes for Logo Spin (if needed) */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
->>>>>>> 83297d600bf07cd7fc3df7053dd66a8514a3df0a

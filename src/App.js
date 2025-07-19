@@ -1,16 +1,16 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
+import About from "./pages/AboutCODDEX";
 import Qualifications from "./components/Qualifications";
 import Projects from "./components/Projects";
-import Services from "./components/Services";
+import Services from "./components/ServicesHomePage";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="dark:bg-gray-900">
+    <div className="min-h-screen bg-[var(--body-bg)] text-[var(--text-color)] transition-colors duration-500">
       <Navbar />
       <Hero />
       <About />

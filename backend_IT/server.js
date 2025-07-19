@@ -40,7 +40,7 @@ mongoose
 
 // Basic Test Route
 app.get("/", (req, res) => {
-  res.send("🌐 WebWeavers Backend API is running");
+  res.send("🌐 CODDEX Backend API is running");
 });
 
 // Server Listen

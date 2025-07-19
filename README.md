@@ -70,7 +70,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 =======
-WebWeavers Agency Website
+CODDEX Agency Website
 Table of Contents
 About
 
@@ -97,7 +97,7 @@ License
 Contact
 
 About
-WebWeavers Agency is a modern, responsive website template designed for web development agencies, freelancers, or digital service providers. It showcases services, pricing, client testimonials, and provides a clear call-to-action to engage potential clients. Built with React and styled with Tailwind CSS, it offers a fast, scalable, and visually appealing user experience.
+CODDEX Agency is a modern, responsive website template designed for web development agencies, freelancers, or digital service providers. It showcases services, pricing, client testimonials, and provides a clear call-to-action to engage potential clients. Built with React and styled with Tailwind CSS, it offers a fast, scalable, and visually appealing user experience.
 
 Features
 Responsive Design: Adapts seamlessly to various screen sizes (desktop, tablet, mobile).
@@ -130,7 +130,7 @@ JavaScript (ES6+)
 Project Structure
 The project follows a standard React application structure:
 
-webweavers-agency/
+CODDEX-agency/
 ├── public/
 ├── src/
 │   ├── assets/             # Images, icons, etc.
@@ -170,10 +170,10 @@ npm (Node Package Manager) or Yarn
 Installation
 Clone the repository:
 
-git clone https://github.com/your-username/webweavers-agency.git
-cd webweavers-agency
+git clone https://github.com/your-username/CODDEX-agency.git
+cd CODDEX-agency
 
-(Replace your-username with your actual GitHub username and webweavers-agency with your repository name if different.)
+(Replace your-username with your actual GitHub username and CODDEX-agency with your repository name if different.)
 
 Install dependencies:
 
@@ -214,7 +214,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Contact
 Your Name/Agency Name
 
-Email: contact@webweavers.com
+Email: contact@CODDEX.com
 
 Website: Your Website URL (e.g., http://localhost:5173/ during development)
 
