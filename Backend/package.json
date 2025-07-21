@@ -1,0 +1,26 @@
+{
+  "name": "coddex-backend-file",
+  "version": "1.0.0",
+  "description": "Backend logic containing files",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run script"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veerrandhir/ITcompany/backend.git"
+  },
+  "keywords": [
+    "Backend",
+    "server",
+    "node.js",
+    "express.js",
+    "mongoDB"
+  ],
+  "author": "Randhir kumar",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.16.4",
+    "node": "^20.19.4"
+  }
+}
