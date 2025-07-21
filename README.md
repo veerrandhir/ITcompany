@@ -85,7 +85,7 @@ node server.js
 
 ## 👨‍💻 Author
 
-**Randhir Veer** – [GitHub](https://github.com/veerrandhir)
+**Randhir Kumar** – [GitHub](https://github.com/veerrandhir)
 
 ---
 
@@ -97,8 +97,4 @@ This project is licensed under the MIT License.
 
 ---
 
-Do you want me to:  
-✅ **Save this README.md directly into your repo**?  
-✅ OR copy it so **you paste manually into VS Code**?  
-✅ OR make **two separate README.md files (frontend & backend)**?
 ```
