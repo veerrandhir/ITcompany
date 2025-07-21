@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -8,7 +9,8 @@ const Contact = () => {
         phone: '',
         message: ''
     });
-    const [submissionMessage, setSubmissionMessage] = useState('');
+    const [statusMessage, setStatusMessage] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -20,28 +22,42 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        setSubmissionMessage('Thank you for your message! We will contact you soon.');
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            message: ''
+        setIsSubmitting(true);
+
+        emailjs.send(
+            'service_c5l0x75',     // 👈 Replace with your Service ID
+            'template_jds5nmi',    // 👈 Replace with your Template ID
+            formData,
+            'zUkQeED6pYl2UhNcf'      // 👈 Replace with your Public Key
+        ).then(
+            () => {
+                console.log('✅ SUCCESS:', formData);
+                setStatusMessage('Thank you! Your message has been sent.');
+                setFormData({ name: '', email: '', phone: '', message: '' });
+            },
+            (error) => {
+                console.error('❌ ERROR:', error);
+                setStatusMessage('Oops! Something went wrong. Please try again.');
+            }
+        ).finally(() => {
+            setIsSubmitting(false);
+            setTimeout(() => setStatusMessage(''), 5000);
         });
-        setTimeout(() => setSubmissionMessage(''), 5000);
     };
 
     return (
         <div className="py-12 bg-[var(--section-bg)] transition-colors duration-500">
             <div className="container mx-auto px-4">
-                <h1 className="text-4xl font-bold mb-12 text-center text-[var(--text-color)] transition-colors duration-500">
+                <h1 className="text-4xl font-bold mb-12 text-center text-[var(--text-color)]">
                     Get In Touch
                 </h1>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Contact Form */}
-                    <div className="bg-[var(--card-bg)] p-8 rounded-lg shadow-md transition-colors duration-500">
-                        <h2 className="text-2xl font-bold mb-6 text-[var(--text-color)]">Send Us a Message</h2>
+                    <div className="bg-[var(--card-bg)] p-8 rounded-lg shadow-md">
+                        <h2 className="text-2xl font-bold mb-6 text-[var(--text-color)]">
+                            Send Us a Message
+                        </h2>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             {['name', 'email', 'phone'].map((field, idx) => (
                                 <div key={idx}>
@@ -54,35 +70,45 @@ const Contact = () => {
                                         name={field}
                                         value={formData[field]}
                                         onChange={handleChange}
-                                        className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 transition-colors duration-300
-                                            border-[var(--text-color)] bg-[var(--input-bg)] text-[var(--text-color)] focus:ring-[var(--button-bg)]"
+                                        className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 border-[var(--text-color)] bg-[var(--input-bg)] text-[var(--text-color)] focus:ring-[var(--button-bg)]"
                                         required={field !== 'phone'}
+                                        disabled={isSubmitting}
                                     />
                                 </div>
                             ))}
 
                             <div>
-                                <label htmlFor="message" className="block mb-2 font-medium text-[var(--text-color)]">Message</label>
+                                <label htmlFor="message" className="block mb-2 font-medium text-[var(--text-color)]">
+                                    Message
+                                </label>
                                 <textarea
                                     id="message"
                                     name="message"
                                     rows="5"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 transition-colors duration-300
-                                        border-[var(--text-color)] bg-[var(--input-bg)] text-[var(--text-color)] focus:ring-[var(--button-bg)]"
+                                    className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 border-[var(--text-color)] bg-[var(--input-bg)] text-[var(--text-color)] focus:ring-[var(--button-bg)]"
                                     required
+                                    disabled={isSubmitting}
                                 ></textarea>
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full bg-[var(--button-bg)] hover:bg-[var(--button-hover-bg)] text-[var(--button-text)] font-bold py-3 px-4 rounded-lg transition duration-300"
+                                disabled={isSubmitting}
+                                className={`w-full font-bold py-3 px-4 rounded-lg transition duration-300 ${
+                                    isSubmitting
+                                        ? 'bg-gray-400 cursor-not-allowed'
+                                        : 'bg-[var(--button-bg)] hover:bg-[var(--button-hover-bg)] text-[var(--button-text)]'
+                                }`}
                             >
-                                Send Message
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
                             </button>
-                            {submissionMessage && (
-                                <p className="mt-4 text-green-600 text-center">{submissionMessage}</p>
+
+                            {statusMessage && (
+                                <p className="mt-4 text-center text-green-500 animate-pulse">
+                                    {statusMessage}
+                                </p>
                             )}
                         </form>
                     </div>
