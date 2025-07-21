@@ -30,7 +30,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link
-          to="https://res.cloudinary.com/drrtddlst/image/upload/v1753018284/CODDEXLogo-name-removed_j9wmtk.png"
+          to="/"
           className={`text-2xl font-bold ${
             darkMode ? 'text-green-400' : 'text-indigo-600'
           }`}
