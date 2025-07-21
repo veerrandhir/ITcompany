@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Base Light Mode Variables */
+:root {
+  --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --transition-speed: 0.4s;
+
+  /* Background Colors */
+  --body-bg: #f3f4f6;          /* Gray-100 */
+  --window-bg: #ffffff;        /* White */
+  --section-bg: #f9fafb;       /* Gray-50 */
+  --card-bg: #ffffff;          /* White */
+
+  /* Text Colors */
+  --text-color: #111827;       /* Gray-900 */
+  --muted-text: #6b7280;       /* Gray-500 */
+
+  /* Links */
+  --link-color: #4f46e5;       /* Indigo-600 */
+  --link-hover-color: #6366f1; /* Indigo-500 */
+
+  /* Buttons */
+  --button-bg: #4f46e5;        /* Indigo-600 */
+  --button-hover-bg: #4338ca;  /* Indigo-700 */
+  --button-text: #ffffff;      /* White */
+
+  /* Navbar */
+  --navbar-bg: #ffffff;        /* White */
+  --navbar-text: #111827;      /* Gray-900 */
+  --navbar-hover: #4f46e5;     /* Indigo-600 */
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"], html.dark {
+  --body-bg: #0f172a;          /* Slate-900 */
+  --window-bg: #1e293b;        /* Slate-800 */
+  --section-bg: #1f2937;       /* Gray-800 */
+  --card-bg: #334155;          /* Slate-700 */
+  --text-color: #f3f4f6;       /* Gray-100 */
+  --muted-text: #9ca3af;       /* Gray-400 */
+  --link-color: #10b981;       /* Emerald-500 */
+  --link-hover-color: #34d399; /* Emerald-400 */
+  --button-bg: #10b981;        /* Emerald-500 */
+  --button-hover-bg: #059669;  /* Emerald-600 */
+  --button-text: #ffffff;      /* White */
+  --navbar-bg: #1f2937;        /* Gray-800 */
+  --navbar-text: #f3f4f6;      /* Gray-100 */
+  --navbar-hover: #34d399;     /* Emerald-400 */
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Root Styling */
+html, body {
+  font-family: var(--font-family);
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Window background (entire app wrapper) */
+#root {
+  background-color: var(--window-bg);
+  transition: background-color var(--transition-speed);
+  min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+nav a {
+  color: var(--navbar-text);
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: color var(--transition-speed);
+}
+nav a:hover {
+  color: var(--navbar-hover);
+}
+
+/* Section Styling */
+section {
+  background-color: var(--section-bg);
+  color: var(--text-color);
+  padding: 2rem 1rem;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Cards / Containers */
+.card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Global Button Styles */
+button,
+.button,
+a.button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 9999px; /* Fully rounded */
+  padding: 0.6rem 1.4rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  transition: background-color var(--transition-speed), color var(--transition-speed), transform 0.2s;
+}
+button:hover,
+.button:hover,
+a.button:hover {
+  background-color: var(--button-hover-bg);
+  transform: scale(1.05);
+}
+button:focus,
+.button:focus,
+a.button:focus {
+  outline: 2px solid var(--button-hover-bg);
+  outline-offset: 2px;
+}
