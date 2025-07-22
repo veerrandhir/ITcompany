@@ -33,10 +33,10 @@ const Footer = () => {
                     <div>
                         <h3 className="text-xl font-bold mb-4">Contact Us</h3>
                         <address className="not-italic">
-                            <p className="mb-2">123 Business Street</p>
-                            <p className="mb-2">Mumbai, India 400001</p>
+                            <p className="mb-2">112 Main Street, </p>
+                            <p className="mb-2"> Phase 5, Aya Nagar, Delhi 11047</p>
                             <p className="mb-2">Email: contact@CODDEX.com</p>
-                            <p>Phone: +91 87890 77454</p>
+                            <p>Phone: +91 87890 77454  +91 85093 79644</p>
                         </address>
                     </div>
 

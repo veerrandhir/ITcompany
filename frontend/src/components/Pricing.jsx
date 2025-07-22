@@ -6,7 +6,7 @@ const Pricing = () => {
     const plans = [
         {
             title: "Starter",
-            price: "₹4,999",
+            price: "₹5,999",
             features: [
                 "1-page website",
                 "Responsive design",
@@ -18,7 +18,7 @@ const Pricing = () => {
             title: "Business",
             price: "₹9,999",
             features: [
-                "Up to 5 pages",
+                "Up to 4 pages",
                 "Advanced design",
                 "SEO & Analytics",
                 "Custom contact form",
@@ -27,7 +27,7 @@ const Pricing = () => {
         },
         {
             title: "Premium",
-            price: "₹14,999",
+            price: "₹29,999",
             features: [
                 "Unlimited pages",
                 "E-commerce/Blog features",

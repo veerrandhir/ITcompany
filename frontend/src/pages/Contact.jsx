@@ -119,7 +119,7 @@ const Contact = () => {
                         {[{
                             icon: <FaMapMarkerAlt className="text-[var(--button-bg)] text-2xl" />,
                             title: "Our Office",
-                            details: "123 Business Street, Mumbai, India 400001"
+                            details: "112 Main Street, Phase 5, Aya Nagar Delhi 11047"
                         }, {
                             icon: <FaPhone className="text-[var(--button-bg)] text-2xl" />,
                             title: "Phone",

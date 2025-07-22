@@ -31,11 +31,20 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         {/* Logo */}
         <Link
           to="/"
-          className={`text-2xl font-bold ${
-            darkMode ? 'text-green-400' : 'text-indigo-600'
-          }`}
+          className="flex items-center space-x-2"
         >
-          CODDEX
+          <img
+            src="https://res.cloudinary.com/drrtddlst/image/upload/v1753018284/CODDEXLogo-name-removed_j9wmtk.png"
+            alt="Company Logo"
+            className="h-8 w-8 rounded-full" // Adjust size as needed
+          />
+          <span
+            className={`text-2xl font-bold ${
+              darkMode ? 'text-green-400' : 'text-indigo-600'
+            }`}
+          >
+            CODDEX
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -58,11 +67,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         </div>
 
         {/* Dark Mode Toggle */}
-       <button
-  onClick={() => setDarkMode(!darkMode)}
-  className="button p-2 w-10 h-10 flex items-center justify-center rounded-full"
->
-
+        <button
+          onClick={() => setDarkMode(!darkMode)}
+          className="p-2 w-10 h-10 flex items-center justify-center rounded-full"
+        >
           {darkMode ? (
             <SunIcon className="h-5 w-5 text-yellow-400" />
           ) : (

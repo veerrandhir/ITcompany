@@ -4,19 +4,19 @@ const Testimonials = () => {
       quote: "CODDEX transformed our outdated site into a modern sales machine. Our online inquiries increased by 200%!",
       name: "Rajesh Sharma",
       company: "SpiceDelight Foods",
-      date: "June 10, 2025"
+      date: "June 01, 2025"
     },
     {
       quote: "The e-commerce site they built for us is fast, easy to use, and has significantly boosted our sales.",
       name: "Priya Patel",
-      company: "UrbanCraft Boutique",
+      company: "CraftCare Boutique",
       date: "May 25, 2025"
     },
     {
       quote: "Excellent service and support. They understood our needs and delivered beyond expectations.",
       name: "Amit Verma",
-      company: "TechSolutions Inc.",
-      date: "April 15, 2025"
+      company: "Veda Institute.",
+      date: "April 15, 2024"
     },
     {
       quote: "We needed a fast launch — CODDEX delivered in just 7 days. Design, SEO, and UX were all on point.",
