@@ -28,18 +28,18 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo + Brand */}
         <Link
           to="/"
-          className="flex items-center space-x-2"
+          className="flex items-center gap-x-1" // Reduced gap
         >
           <img
             src="https://res.cloudinary.com/drrtddlst/image/upload/v1753018284/CODDEXLogo-name-removed_j9wmtk.png"
             alt="Company Logo"
-            className="h-8 w-8 rounded-full" // Adjust size as needed
+            className="h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 object-contain"
           />
           <span
-            className={`text-2xl font-bold ${
+            className={`text-xl md:text-2xl lg:text-3xl font-bold ${
               darkMode ? 'text-green-400' : 'text-indigo-600'
             }`}
           >
